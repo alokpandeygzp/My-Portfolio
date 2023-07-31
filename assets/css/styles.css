@@ -510,7 +510,7 @@ img {
     align-items: center;
     text-align: initial;
   }
-  .work__container {
+  .education__container {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
   }
@@ -527,4 +527,74 @@ img {
   .home__img {
     width: 450px;
   }
+}
+
+
+
+/* Add this CSS to your main CSS file or create a new CSS file for the Projects section */
+
+/* Projects Section */
+.work {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.work__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.project__item {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project__details {
+  flex: 1;
+}
+
+.project__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.project__description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.project__date {
+  font-size: 14px;
+  color: #777;
+}
+
+.project__image {
+  max-width: 100%;
+  height: auto;
+  width: 300px; /* Adjust this width as per your preference */
+  margin-left: 20px; /* Adjust this margin as per your preference */
+}
+
+/* Media Query for Responsiveness */
+@media screen and (max-width: 768px) {
+  .work__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project__title {
+  margin-bottom: var(--mb-4);
 }
