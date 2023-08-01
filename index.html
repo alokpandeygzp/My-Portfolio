@@ -45,6 +45,9 @@
             <li class="nav__item">
               <a href="#projects" class="nav__link">Projects</a>
             </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contact</a>
+            </li>
           </ul>
         </div>
 
@@ -58,7 +61,7 @@
       <!--===== HOME =====-->
       <section class="home bd-grid" id="home">
         <div class="home__data">
-          <h1 class="home__title">
+          <h1 class="home__title" id="title">
             Hi,<br />I'am <span class="home__title-color">Alok Pandey</span
             ><br />
             Software Engineer
@@ -226,30 +229,6 @@
         </div>
       </section>
 
-      <!--===== CONTACT =====-->
-      <!-- <section class="contact section" id="contact">
-        <h2 class="section-title">Contact</h2>
-
-        <div class="contact__container bd-grid">
-          <form action="" class="contact__form">
-            <input type="text" placeholder="Name" class="contact__input" />
-            <input type="mail" placeholder="Email" class="contact__input" />
-            <textarea
-              name=""
-              id=""
-              cols="0"
-              rows="10"
-              class="contact__input"
-            ></textarea>
-            <input
-              type="button"
-              value="Contact"
-              class="contact__button button"
-            />
-          </form>
-        </div>
-      </section> -->
-
       <!--===== Projects Section =====-->
 <section class="work section" id="projects">
   <h2 class="section-title">Projects</h2>
@@ -267,9 +246,10 @@
           to make informed decisions on article publication.
         </p>
         <p class="project__date">[Feb’23–April’23]</p><br>
-        <a href="https://github.com/alokpandeygzp/NITC-eMagazine" target="_blank" class="button">Go to GitHub</a>
-      </div>
-      <img class="project__image" src="assets/img/emagazine.jpeg" alt="Project Image">
+          <a href="https://github.com/alokpandeygzp/NITC-eMagazine" target="_blank" class="button">Go to GitHub</a>
+        </div>
+        <br><br><br>
+        <img class="project__image" src="assets/img/emagazine.jpeg" alt="Project Image">      
     </div>
   </div>
   <div class="work__container bd-grid">
@@ -286,6 +266,7 @@
         <p class="project__date">[June’23–July’23]</p><br>
         <a href="https://github.com/alokpandeygzp/DineEase" target="_blank" class="button">Go to GitHub</a>
       </div>
+      <br><br><br>
       <img class="project__image" src="assets/img/dineease.jpeg" alt="Project Image">
     </div>
   </div>
@@ -302,11 +283,27 @@
         <p class="project__date">[Sept’22–Dec’22]</p><br>
         <a href="https://github.com/alokpandeygzp/Hostel-Accomodation-System" target="_blank" class="button">Go to GitHub</a>
       </div>
+      <br><br><br>
       <img class="project__image" src="assets/img/hostel.jpeg" alt="Project Image">
     </div>
   </div>
 </section>
 <!--===== End of Projects Section =====-->
+
+ <!-- ===== CONTACT =====--> 
+<section class="contact section" id="contact">
+  <h2 class="section-title">Contact</h2>
+
+  <div class="contact__container bd-grid">
+    <form class="contact__form">
+      <input type="text" placeholder="Name" class="contact__input" id="contact-name" />
+      <input type="mail" placeholder="Email" class="contact__input" id="contact-email" />
+      <textarea name="" placeholder="Type message here.." id="contact-message" cols="0" rows="10" class="contact__input"></textarea>
+      <input type="button" value="Contact" class="contact__button button" id="contact-submit" />
+    </form>
+  </div>
+</section>
+<!--===== End of Contacts Section =====-->
 
     </main>
 
@@ -341,5 +338,9 @@
 
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.js"></script>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="assets/js/Email.js"></script>
+
   </body>
 </html>

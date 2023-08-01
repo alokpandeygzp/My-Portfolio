@@ -531,8 +531,6 @@ img {
 
 
 
-/* Add this CSS to your main CSS file or create a new CSS file for the Projects section */
-
 /* Projects Section */
 .work {
   padding: 100px 0;
@@ -584,16 +582,37 @@ img {
 .project__image {
   max-width: 100%;
   height: auto;
-  width: 300px; /* Adjust this width as per your preference */
-  margin-left: 20px; /* Adjust this margin as per your preference */
+  width: 300px; /* Set a fixed width for the image to control its size on larger screens */
+  margin-left: 20px; /* Adjust the spacing between the image and project details */
 }
 
-/* Media Query for Responsiveness */
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .work__container {
+    grid-template-columns: 1fr; /* Change to a single column layout on smaller screens */
+  }
+
+  .project__item {
+    flex-direction: column; /* Stack the project details and image on top of each other */
+    text-align: center; /* Center align the project details */
+    padding: 20px; /* Reduce the padding for better spacing on smaller screens */
+  }
+
+  .project__image {
+    margin-top: -50px; /* Move the image upwards */
+    width: 100%; /* Make the image take the full width on smaller screens */
+    margin-left: 0; /* Reset the left margin for better alignment */
+    margin-bottom: 20px; /* Add some spacing between the image and project details */
+  }
+}
+
+
+/* Media Query for Responsiveness
 @media screen and (max-width: 768px) {
   .work__container {
     grid-template-columns: 1fr;
   }
-}
+} */
 
 .project__title {
   margin-bottom: var(--mb-4);

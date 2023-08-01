@@ -54,3 +54,31 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text, .project_
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
+/*===== AUTOMATIC TITLE CHANGES =====*/
+
+const titles = ["Coder", "Web Developer", "UI/UX Designer", "Problem Solver"];
+  let index = 0;
+  let letterIndex = 0;
+  let currentTitle = "";
+
+  function changeTitle() {
+    if (letterIndex < titles[index].length) {
+      currentTitle += titles[index][letterIndex];
+      document.getElementById("title").innerHTML = `
+        Hi,<br />I'am <span class="home__title-color">Alok Pandey</span><br />
+        ${currentTitle}
+      `;
+      letterIndex++;
+    } else {
+      letterIndex = 0;
+      currentTitle = "";
+      index = (index + 1) % titles.length;
+    }
+  }
+
+  setInterval(changeTitle, 200); // Add each letter every 200 milliseconds
+
+
+
+
