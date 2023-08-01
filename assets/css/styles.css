@@ -506,7 +506,6 @@ img {
   .work__container {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
-    padding-top: 2rem;
   }
   .contact__form {
     width: 360px;
@@ -639,7 +638,7 @@ img {
 
 .project__image {
   max-width: 100%;
-  height: auto;
+  height: 300px;
   width: 300px; /* Set a fixed width for the image to control its size on larger screens */
   margin-left: 20px; /* Adjust the spacing between the image and project details */
 }
@@ -673,11 +672,11 @@ img {
 
 /* Dark Mode Styles */
 .dark-mode .work__container {
-  background-color: #111; /* Set the background color for dark mode */
+  background-color: #333; /* Set the background color for dark mode */
 }
 
 .dark-mode .project__item {
-  background-color: #222; /* Set the background color for dark mode */
+  background-color: #333; /* Set the background color for dark mode */
 }
 
 .dark-mode .project__title {
@@ -714,5 +713,97 @@ img {
   background-color: #444; /* Set the button background color for dark mode */
   color: #fff; /* Set the button text color for dark mode */
   border: 1px solid #fff; /* Set the button border color for dark mode */
+}
+
+
+/* Adjust the styles as needed */
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.contact__container {
+  row-gap: 3rem;
+}
+
+.contact__information {
+  display: flex;
+  margin-bottom: var(--mb-2);
+}
+
+.contact__icon {
+  font-size: 1.5rem;
+  color: var(--first-color);
+  margin-right: var(--mb-0-75);
+}
+
+.content__title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+
+
+/* Default theme (light mode) */
+:root {
+  --button-bg-color-light: black;
+  --button-text-color-light: white;
+  --button-hover-opacity-light: 0.8;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --button-bg-color-dark: white;
+    --button-text-color-dark: black;
+    --button-hover-opacity-dark: 0.6;
+  }
+}
+
+/* Style for carousel control buttons */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+/* Style for carousel control icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  color: white;
+  font-size: 24px;
+}
+
+/* Style for the left button */
+.carousel-control-prev {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+/* Style for the right button */
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+/* Change the color of the buttons on hover */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+/* Remove the blue horizontal line caused by div.carousel-item.active::after */
+.carousel-item.active::after {
+  background: none;
 }
 
