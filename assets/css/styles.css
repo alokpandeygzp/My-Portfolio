@@ -25,6 +25,20 @@
   --z-back: -10;
   --z-fixed: 100;
 }
+/* Light Mode */
+:root {
+  --primary-color: #007bff;
+  --background-color: #ffffff;
+  --text-color: #333333;
+}
+
+/* Dark Mode */
+.dark-mode {
+  --primary-color: #1a1a1a;
+  --background-color: #222222;
+  --text-color: #ffffff;
+}
+
 
 @media screen and (min-width: 968px) {
   :root {
@@ -50,6 +64,50 @@ body {
   font-size: var(--normal-font-size);
   color: var(--second-color);
 }
+
+/* body {
+  margin: var(--header-height) 0 0 0;
+  font-family: Arial, sans-serif;
+  font-size: var(--normal-font-size);
+  background-color: white;
+  color: black;
+} */
+
+/* Light Mode Styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Add styles for dark mode */
+.dark-mode .l-header {
+  background-color: #333; /* Update this with your desired background color for dark mode */
+  color: #fff; /* Set the text color to white for dark mode */
+}
+
+.dark-mode .nav__link {
+  color: #fff; /* Set the link text color to white for dark mode */
+}
+
+.dark-mode .nav__logo {
+  color: #fff;
+}
+
+/* Add styles for dark mode */
+.dark-mode .home__social-icon {
+  color: #fff; /* Set the color of social icons to white for dark mode */
+}
+
+
+/* Add any other specific styling for dark mode here */
+
+
 
 h1, h2, p {
   margin: 0;
@@ -607,13 +665,54 @@ img {
 }
 
 
-/* Media Query for Responsiveness
-@media screen and (max-width: 768px) {
-  .work__container {
-    grid-template-columns: 1fr;
-  }
-} */
-
 .project__title {
   margin-bottom: var(--mb-4);
 }
+
+
+
+/* Dark Mode Styles */
+.dark-mode .work__container {
+  background-color: #111; /* Set the background color for dark mode */
+}
+
+.dark-mode .project__item {
+  background-color: #222; /* Set the background color for dark mode */
+}
+
+.dark-mode .project__title {
+  color: #fff; /* Set the project title color for dark mode */
+}
+
+.dark-mode .project__description {
+  color: #ccc; /* Set the project description color for dark mode */
+}
+
+.dark-mode .project__date {
+  color: #aaa; /* Set the project date color for dark mode */
+}
+
+
+
+/* Dark Mode Styles For Contact Form */
+
+
+/* Dark Mode Styles for Contact Form */
+.dark-mode .contact__container {
+  background-color: #333; /* Set the background color for dark mode */
+  color: #fff; /* Set the text color for dark mode */
+}
+
+.dark-mode .contact__input,
+.dark-mode .contact__textarea {
+  background-color: #222; /* Set the input and textarea background color for dark mode */
+  color: #fff; /* Set the input and textarea text color for dark mode */
+  border: 1px solid #fff; /* Set the border color for input and textarea in dark mode */
+}
+
+.dark-mode .contact__button {
+  background-color: #444; /* Set the button background color for dark mode */
+  color: #fff; /* Set the button text color for dark mode */
+  border: 1px solid #fff; /* Set the button border color for dark mode */
+}
+

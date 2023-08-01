@@ -82,3 +82,20 @@ const titles = ["Coder", "Web Developer", "UI/UX Designer", "Problem Solver"];
 
 
 
+  const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+const header = document.querySelector('.l-header'); // Get the header element
+
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  header.classList.toggle('dark-mode'); // Toggle dark mode class for the header
+
+  // Toggle the icon between sun and moon based on dark mode state
+  if (body.classList.contains('dark-mode')) {
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+  } else {
+    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+  }
+});
+
+
