@@ -20,12 +20,11 @@ emailjs.init('vZMrjScfM3_UC-xRu');
     emailjs.send("service_v7j5gk9", "template_587oavu", templateParams)
       .then(function(response) {
         console.log('Email sent successfully:', response);
-
+        alert("Email sent successfully :)");
         // Clear the input fields after sending the email
         document.getElementById('contact-name').value = '';
         document.getElementById('contact-email').value = '';
         document.getElementById('contact-message').value = '';
-        alert("Email sent successfully");
       }, function(error) {
         console.log('Failed to send email:', error);
 
