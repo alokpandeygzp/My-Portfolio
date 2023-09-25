@@ -57,7 +57,7 @@ sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200});
 
 /*===== AUTOMATIC TITLE CHANGES =====*/
 
-const titles = ["Coder", "Web Developer", "UI/UX Designer", "Problem Solver"];
+const titles = ["Coder", "Web Developer", "Front-End Designer", "Problem Solver"];
   let index = 0;
   let letterIndex = 0;
   let currentTitle = "";
